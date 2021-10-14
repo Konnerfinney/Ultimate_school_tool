@@ -1,17 +1,23 @@
 from tkinter import *
 from tkinter.ttk import *
+import launch_zoom
+import auto_title_page
+import get_class_schedule
+import create_study_bank
 
 def title_page():
     print("title page")
 
 def study_bank():
     print("study bank")
+    create_study_bank.run()
 
 def class_schedule():
     print("class schedule")
 
 def zoom_login():
     print("zoom login")
+    
 
 root=Tk()
 
@@ -21,7 +27,7 @@ root.geometry('600x600')
 b_title_page = Button(root, text = "Create Title Page", command = title_page)
 b_study_bank = Button(root, text = "Create Study Bank", command = study_bank)
 b_class_schedule = Button(root, text = "Show Class Schedule", command = class_schedule)
-b_zoom_login = Button(root, text = "Show Class Schedule", command = zoom_login)
+b_zoom_login = Button(root, text = "Log into Zoom", command = zoom_login)
 
 # button grid assignment
 b_title_page.grid(row = 0, column = 0, sticky = W, pady = 2)
