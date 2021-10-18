@@ -1,7 +1,7 @@
 
 # Object for all class items
 class school_class():
-    def __init__(self,name,professor,section,*time):
+    def __init__(self,name: str,professor: str,section: str,*time):
         self.name = name
         self.professor = professor
         self.section = section
@@ -10,22 +10,22 @@ class school_class():
             self.times.add(t)
 
     def get_name(self) -> str:
-        pass
+        return self.name
 
     def get_professor(self)-> str:
-        pass
+        return self.professor
 
     def get_section(self)-> str:
-        pass
+        return self.section
 
     def get_times(self) -> list:
-        pass
+        return self.times
 
     def set_zoom_link(self, s: str) -> None:
         self.zoom_link = s
 
     def get_zoom_link(self) -> str:
-        pass
+        return self.zoom_link
 
     def dump_info(self) -> list:
         c_name = self.get_name + "-" + self.get_section
