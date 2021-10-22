@@ -14,7 +14,6 @@ class settings:
             self.settings_dict[temp_list[0]] = temp_list[1]
 
     def create_settings_file(self):
-        cwd = os.getcwd()
         if not self.settings_file_exists():
             open("settings.json","x")
 
@@ -35,5 +34,6 @@ class settings:
             self.settings_file = open("settings.json","r")
 
     def settings_file_exists(self) -> bool:
+        cwd = os.getcwd()
         return (os.path.exists(cwd + "/settings.json"))
 
